@@ -4,11 +4,32 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public float speed = 5f; // Kecepatan gerak obstacle ke bawah
+    
+    private bool hasScored = false; // Untuk memastikan skor hanya ditambah sekali
+    private Transform playerTransform;
+    private GameManager gameManager;
+
+    void Start()
+    {
+        // Cari objek Player dan GameManager saat obstacle dibuat
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            playerTransform = playerObject.transform;
+        }
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     void Update()
     {
         // Gerakkan obstacle lurus ke bawah
         transform.Translate(Vector2.down * speed * Time.deltaTime);
+
+        // Jika obstacle melewati pemain dan belum memberikan skor, tambahkan skor
+        if (!hasScored && playerTransform != null && transform.position.y < playerTransform.position.y) {
+            if (gameManager != null) gameManager.AddScore(1);
+            hasScored = true; // Tandai bahwa skor sudah diberikan
+        }
 
         // Hapus obstacle jika sudah terlalu jauh di bawah layar
         if (transform.position.y < -8f)
@@ -24,9 +45,8 @@ public class Obstacle : MonoBehaviour
         {
             Debug.Log("Obstacle: Bertabrakan dengan Player!");
             // Beri tahu GameManager bahwa pemain terkena damage
-            GameManager gm = FindObjectOfType<GameManager>();
-            if (gm != null) gm.PlayerTookDamage();
-
+            if (gameManager != null) gameManager.PlayerTookDamage();
+            
             Destroy(gameObject); // Hancurkan rintangan ini
         }
     }
