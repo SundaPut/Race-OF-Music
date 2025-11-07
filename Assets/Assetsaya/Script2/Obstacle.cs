@@ -2,8 +2,7 @@ using UnityEngine;
 
 // Skrip ini mengatur perilaku rintangan (obstacle)
 public class Obstacle : MonoBehaviour
-{
-    public float speed = 5f; // Kecepatan gerak obstacle ke bawah
+{ 
     
     private bool hasScored = false; // Untuk memastikan skor hanya ditambah sekali
     private Transform playerTransform;
@@ -23,7 +22,10 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         // Gerakkan obstacle lurus ke bawah
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        if (gameManager != null)
+        {
+            transform.Translate(Vector2.down * gameManager.currentGameSpeed * Time.deltaTime);
+        }
 
         // Jika obstacle melewati pemain dan belum memberikan skor, tambahkan skor
         if (!hasScored && playerTransform != null && transform.position.y < playerTransform.position.y) {

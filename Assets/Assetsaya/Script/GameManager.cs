@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
     public GameObject mountainObject; // Seret objek Mountain dari Hierarchy ke sini
     public Text scoreText; // Seret komponen UI Text ke sini di Inspector
 
+    [Header("Game Speed Settings")]
+    public float initialGameSpeed = 5f; // Kecepatan awal permainan
+    public float speedIncreasePerScore = 0.1f; // Seberapa besar kecepatan bertambah per skor
+    public float currentGameSpeed { get; private set; } // Properti untuk diakses skrip lain
+
     private int score = 0;
     private bool isGameOver = false;
     private int playerHealth = 2; // Pemain punya 2 nyawa
@@ -16,6 +21,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // Atur kecepatan awal permainan
+        currentGameSpeed = initialGameSpeed;
+
         // Hitung lebar layar dalam satuan world unit
         screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
@@ -47,6 +55,10 @@ public class GameManager : MonoBehaviour
         if (isGameOver) return; // Jangan tambah skor jika sudah game over
         score += amount;
         if (scoreText != null) scoreText.text = "Score: " + score;
+
+        // Tingkatkan kecepatan permainan berdasarkan skor
+        currentGameSpeed = initialGameSpeed + (score * speedIncreasePerScore);
+        Debug.Log("New Game Speed: " + currentGameSpeed); // Untuk debugging
     }
 
     public void PlayerTookDamage()
