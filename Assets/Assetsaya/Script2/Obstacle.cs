@@ -2,39 +2,55 @@ using UnityEngine;
 
 // Skrip ini mengatur perilaku rintangan (obstacle)
 public class Obstacle : MonoBehaviour
-{ 
-    
-    private bool hasScored = false; // Untuk memastikan skor hanya ditambah sekali
+{
+    private bool hasScored = false;
     private Transform playerTransform;
-    private GameManager gameManager;
+
+    // Ganti FindObjectOfType dengan Singleton Instance
+    private GameManager gameManagerInstance;
+
+    // Batas aman: Obstacle harus 1.0f unit LEBIH RENDAH dari posisi pemain untuk skor bertambah.
+    // Sesuaikan nilai ini jika perlu.
+    private const float SCORE_BOUNDARY_OFFSET = 1.0f;
 
     void Start()
     {
-        // Cari objek Player dan GameManager saat obstacle dibuat
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
             playerTransform = playerObject.transform;
         }
-        gameManager = FindObjectOfType<GameManager>();
+
+        // Dapatkan Singleton GameManager
+        gameManagerInstance = GameManager.Instance;
+
+        if (playerTransform == null || gameManagerInstance == null)
+        {
+            Destroy(gameObject); // Hancurkan jika setup gagal
+        }
     }
 
     void Update()
     {
-        // Gerakkan obstacle lurus ke bawah
-        if (gameManager != null)
-        {
-            transform.Translate(Vector2.down * gameManager.currentGameSpeed * Time.deltaTime);
-        }
+        if (gameManagerInstance == null) return;
 
-        // Jika obstacle melewati pemain dan belum memberikan skor, tambahkan skor
-        if (!hasScored && playerTransform != null && transform.position.y < playerTransform.position.y) {
-            if (gameManager != null) gameManager.AddScore(1);
-            hasScored = true; // Tandai bahwa skor sudah diberikan
+        // Gerakkan obstacle
+        transform.Translate(Vector2.down * gameManagerInstance.currentGameSpeed * Time.deltaTime);
+
+        // --- Logika Penambahan Skor ---
+        if (!hasScored && playerTransform != null)
+        {
+            // Skor bertambah jika posisi Y rintangan lebih rendah dari posisi Y pemain dikurangi offset.
+            // Contoh: Posisi pemain Y=0. Skor bertambah saat rintangan mencapai Y < -1.0f
+            if (transform.position.y < playerTransform.position.y - SCORE_BOUNDARY_OFFSET)
+            {
+                gameManagerInstance.AddScore(1); // Panggil AddScore di GameManager
+                hasScored = true;
+            }
         }
 
         // Hapus obstacle jika sudah terlalu jauh di bawah layar
-        if (transform.position.y < -8f)
+        if (transform.position.y < -10f)
         {
             Destroy(gameObject);
         }
@@ -42,14 +58,11 @@ public class Obstacle : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Jika rintangan mengenai player, panggil GameOver
-        if (other.CompareTag("Player"))
+        // Panggil PlayerTookDamage di GameManager saat bertabrakan
+        if (other.CompareTag("Player") && gameManagerInstance != null)
         {
-            Debug.Log("Obstacle: Bertabrakan dengan Player!");
-            // Beri tahu GameManager bahwa pemain terkena damage
-            if (gameManager != null) gameManager.PlayerTookDamage();
-            
-            Destroy(gameObject); // Hancurkan rintangan ini
+            gameManagerInstance.PlayerTookDamage();
+            Destroy(gameObject);
         }
     }
 }
