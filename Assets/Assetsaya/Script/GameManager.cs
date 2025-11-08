@@ -9,13 +9,21 @@ public class GameManager : MonoBehaviour
     public GameObject mountainObject; // Seret objek Mountain dari Hierarchy ke sini
     public Text scoreText; // Seret komponen UI Text ke sini di Inspector
 
-    private float score = 0f;
+    [Header("Game Speed Settings")]
+    public float initialGameSpeed = 5f; // Kecepatan awal permainan
+    public float speedIncreasePerScore = 0.1f; // Seberapa besar kecepatan bertambah per skor
+    public float currentGameSpeed { get; private set; } // Properti untuk diakses skrip lain
+
+    private int score = 0;
     private bool isGameOver = false;
     private int playerHealth = 2; // Pemain punya 2 nyawa
     private float screenWidth;
 
     void Start()
     {
+        // Atur kecepatan awal permainan
+        currentGameSpeed = initialGameSpeed;
+
         // Hitung lebar layar dalam satuan world unit
         screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
@@ -39,9 +47,18 @@ public class GameManager : MonoBehaviour
             return; // Hentikan update jika game sudah berakhir
         }
 
-        // --- Tambah Skor & Kesulitan ---
-        score += Time.deltaTime * 10; // Skor bertambah berdasarkan waktu
-        if (scoreText != null) scoreText.text = "Score: " + (int)score;
+        // Skor sekarang ditangani oleh AddScore()
+    }
+
+    public void AddScore(int amount)
+    {
+        if (isGameOver) return; // Jangan tambah skor jika sudah game over
+        score += amount;
+        if (scoreText != null) scoreText.text = "Score: " + score;
+
+        // Tingkatkan kecepatan permainan berdasarkan skor
+        currentGameSpeed = initialGameSpeed + (score * speedIncreasePerScore);
+        Debug.Log("New Game Speed: " + currentGameSpeed); // Untuk debugging
     }
 
     public void PlayerTookDamage()
@@ -99,6 +116,6 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         Destroy(player); // Hancurkan player
-        if (scoreText != null) scoreText.text = "GAME OVER\nScore: " + (int)score + "\nTekan 'R' untuk Restart";
+        if (scoreText != null) scoreText.text = "GAME OVER\nScore: " + score + "\nTekan 'R' untuk Restart";
     }
 }

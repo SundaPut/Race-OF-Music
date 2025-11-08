@@ -4,8 +4,7 @@ using UnityEngine;
 public class ScrollingBackground : MonoBehaviour
 {
     [Header("Scrolling")]
-    public float scrollSpeed = 2f;
-    private float backgroundHeight;
+    private float backgroundHeight; 
     private Vector3 startPosition;
 
     [Header("Obstacle Spawning")]
@@ -15,20 +14,27 @@ public class ScrollingBackground : MonoBehaviour
     public float maxMoveDistance = 4f; // Jarak maksimal pergerakan obstacle baru dari yang lama
     private float lastObstacleX = 0f;  // Menyimpan posisi X obstacle terakhir
     private float nextSpawnTime;
+
+    private GameManager gameManager;
+
     void Start()
     {
         // Simpan posisi awal dan tinggi dari sprite latar belakang
         startPosition = transform.position;
         backgroundHeight = GetComponent<SpriteRenderer>().bounds.size.y;
+
+        // Cari GameManager
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
     {
         // Hitung posisi baru menggunakan Mathf.Repeat untuk membuat efek looping yang mulus.
-        // Time.time * scrollSpeed adalah total jarak yang telah ditempuh.
-        // Mathf.Repeat akan membuat nilai ini selalu berada di antara 0 dan backgroundHeight.
-        float newY = Mathf.Repeat(Time.time * scrollSpeed, backgroundHeight);
-        transform.position = startPosition + Vector3.down * newY;
+        if (gameManager != null)
+        {
+            transform.position -= Vector3.up * gameManager.currentGameSpeed * Time.deltaTime;
+            if (transform.position.y < startPosition.y - backgroundHeight) transform.position = startPosition;
+        }
 
         // Cek apakah sudah waktunya untuk memunculkan obstacle baru
         if (obstaclePrefab != null && Time.time > nextSpawnTime)
