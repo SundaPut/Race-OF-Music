@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: af4d1a2dd22570444ada6585e8507ca3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gj_rom (assets all buttons)-01_50
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 2297
+        width: 1552
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132dbe1cf8bc90448b0cd98e0ea9cc75
+      internalID: 1064981546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets all buttons)-01_51
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 1785
+        width: 1556
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1d9910b60b6184fa81a66d34824353
+      internalID: -379583614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets all buttons)-01_63
+      rect:
+        serializedVersion: 2
+        x: 3344
+        y: 1244
+        width: 1533
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08e8dcadfddaa043939b9b407184a39
+      internalID: -2072442815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets all buttons)-01_100
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 139
+        width: 962
+        height: 940
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e18871f1c08974e9040d91b876c694
+      internalID: 678671094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets all buttons)-01_101
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 107
+        width: 1253
+        height: 1035
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0664d3a56ac7f49ba091ba9e130ab0
+      internalID: -1900578813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets all buttons)-01_102
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 686
+        width: 1556
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7b636d6c362644d992ba4bc849e21e
+      internalID: 857422198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets all buttons)-01_103
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 150
+        width: 1526
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a58f57d25b2ce409435ac060542c96
+      internalID: 381438923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gj_rom (assets all buttons)-01_0: -543128894
+      gj_rom (assets all buttons)-01_1: 267438934
+      gj_rom (assets all buttons)-01_10: -1788564399
+      gj_rom (assets all buttons)-01_100: 678671094
+      gj_rom (assets all buttons)-01_101: -1900578813
+      gj_rom (assets all buttons)-01_102: 857422198
+      gj_rom (assets all buttons)-01_103: 381438923
+      gj_rom (assets all buttons)-01_11: -1393102391
+      gj_rom (assets all buttons)-01_12: 827203001
+      gj_rom (assets all buttons)-01_13: -1975640412
+      gj_rom (assets all buttons)-01_14: 925663090
+      gj_rom (assets all buttons)-01_15: 1758768688
+      gj_rom (assets all buttons)-01_16: -363797226
+      gj_rom (assets all buttons)-01_17: 1617753779
+      gj_rom (assets all buttons)-01_18: 1020912459
+      gj_rom (assets all buttons)-01_19: -501116982
+      gj_rom (assets all buttons)-01_2: 84908918
+      gj_rom (assets all buttons)-01_20: -450856332
+      gj_rom (assets all buttons)-01_21: 1766765851
+      gj_rom (assets all buttons)-01_22: 933127553
+      gj_rom (assets all buttons)-01_23: 1839232145
+      gj_rom (assets all buttons)-01_24: 213120152
+      gj_rom (assets all buttons)-01_25: 485493863
+      gj_rom (assets all buttons)-01_26: 1281843307
+      gj_rom (assets all buttons)-01_27: 1137829236
+      gj_rom (assets all buttons)-01_28: -1330237300
+      gj_rom (assets all buttons)-01_29: 131975613
+      gj_rom (assets all buttons)-01_3: -60281417
+      gj_rom (assets all buttons)-01_30: -1210556780
+      gj_rom (assets all buttons)-01_31: -1064478548
+      gj_rom (assets all buttons)-01_32: -1254703701
+      gj_rom (assets all buttons)-01_33: 411977065
+      gj_rom (assets all buttons)-01_34: -1731830380
+      gj_rom (assets all buttons)-01_35: 1064056344
+      gj_rom (assets all buttons)-01_36: -1572527591
+      gj_rom (assets all buttons)-01_37: 1584984529
+      gj_rom (assets all buttons)-01_38: -417334338
+      gj_rom (assets all buttons)-01_39: -989426908
+      gj_rom (assets all buttons)-01_4: 922916117
+      gj_rom (assets all buttons)-01_40: -453077524
+      gj_rom (assets all buttons)-01_41: -876967796
+      gj_rom (assets all buttons)-01_42: 517877733
+      gj_rom (assets all buttons)-01_43: -572079453
+      gj_rom (assets all buttons)-01_44: 1811378351
+      gj_rom (assets all buttons)-01_45: 1961714138
+      gj_rom (assets all buttons)-01_46: 33012566
+      gj_rom (assets all buttons)-01_47: 388260905
+      gj_rom (assets all buttons)-01_48: 512714066
+      gj_rom (assets all buttons)-01_49: 374496259
+      gj_rom (assets all buttons)-01_5: 381578506
+      gj_rom (assets all buttons)-01_50: 1064981546
+      gj_rom (assets all buttons)-01_51: -379583614
+      gj_rom (assets all buttons)-01_52: 1168387371
+      gj_rom (assets all buttons)-01_53: 958041811
+      gj_rom (assets all buttons)-01_54: 1885899801
+      gj_rom (assets all buttons)-01_55: -1227065643
+      gj_rom (assets all buttons)-01_56: 1991615782
+      gj_rom (assets all buttons)-01_57: 1641070579
+      gj_rom (assets all buttons)-01_58: 348872873
+      gj_rom (assets all buttons)-01_59: 2036784878
+      gj_rom (assets all buttons)-01_6: -1792143795
+      gj_rom (assets all buttons)-01_60: -1712808288
+      gj_rom (assets all buttons)-01_61: 467997617
+      gj_rom (assets all buttons)-01_62: -867574230
+      gj_rom (assets all buttons)-01_63: -2072442815
+      gj_rom (assets all buttons)-01_64: -591183135
+      gj_rom (assets all buttons)-01_65: 1535070303
+      gj_rom (assets all buttons)-01_66: 1056495411
+      gj_rom (assets all buttons)-01_67: 1235371809
+      gj_rom (assets all buttons)-01_68: -183341905
+      gj_rom (assets all buttons)-01_69: -22095138
+      gj_rom (assets all buttons)-01_7: 895754589
+      gj_rom (assets all buttons)-01_70: 1524302724
+      gj_rom (assets all buttons)-01_71: 419704859
+      gj_rom (assets all buttons)-01_72: -836538970
+      gj_rom (assets all buttons)-01_73: -390155133
+      gj_rom (assets all buttons)-01_74: 1782953004
+      gj_rom (assets all buttons)-01_75: 651322942
+      gj_rom (assets all buttons)-01_76: -1899832965
+      gj_rom (assets all buttons)-01_77: -503469815
+      gj_rom (assets all buttons)-01_78: 1763759842
+      gj_rom (assets all buttons)-01_79: -1027932332
+      gj_rom (assets all buttons)-01_8: -1937129005
+      gj_rom (assets all buttons)-01_80: 1718715876
+      gj_rom (assets all buttons)-01_81: -2116952756
+      gj_rom (assets all buttons)-01_82: 548268348
+      gj_rom (assets all buttons)-01_83: 325873298
+      gj_rom (assets all buttons)-01_84: -1945169098
+      gj_rom (assets all buttons)-01_85: -1312389434
+      gj_rom (assets all buttons)-01_86: -1337404202
+      gj_rom (assets all buttons)-01_87: -1665717241
+      gj_rom (assets all buttons)-01_88: -1201240297
+      gj_rom (assets all buttons)-01_89: 53737620
+      gj_rom (assets all buttons)-01_9: 1888065336
+      gj_rom (assets all buttons)-01_90: 1664573953
+      gj_rom (assets all buttons)-01_91: 776348766
+      gj_rom (assets all buttons)-01_92: -733600460
+      gj_rom (assets all buttons)-01_93: 1579657892
+      gj_rom (assets all buttons)-01_94: -1139023212
+      gj_rom (assets all buttons)-01_95: 1995459749
+      gj_rom (assets all buttons)-01_96: -1560315824
+      gj_rom (assets all buttons)-01_97: -676856062
+      gj_rom (assets all buttons)-01_98: -1674581107
+      gj_rom (assets all buttons)-01_99: -1676275909
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

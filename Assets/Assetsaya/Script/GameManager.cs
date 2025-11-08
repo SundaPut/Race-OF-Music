@@ -1,39 +1,72 @@
 using UnityEngine;
 using UnityEngine.UI; // Diperlukan untuk mengakses komponen UI
-using System.Collections; // Diperlukan untuk Coroutine
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement; // Diperlukan untuk me-restart scene
 
 public class GameManager : MonoBehaviour
 {
+    // --- Singleton Setup ---
+    public static GameManager Instance;
+
+    [Header("Game References")]
     public GameObject player;
-    public GameObject mountainObject; // Seret objek Mountain dari Hierarchy ke sini
-    public Text scoreText; // Seret komponen UI Text ke sini di Inspector
+    public GameObject mountainObject;
+    [Tooltip("Seret objek dengan script ScoreManager di sini.")]
+    public ScoreManager scoreManager;
+
+    // VARIABEL UI GAME OVER DIPINDAHKAN KE SINI DARI SCCOREMANAGER
+    [Header("Game Over UI")]
+    public GameObject gameOverPanel;
+    public List<Image> finalScoreDisplayImages;
+    // public Text scoreText; // DIHAPUS: Tidak lagi menggunakan Text UI
 
     [Header("Game Speed Settings")]
-    public float initialGameSpeed = 5f; // Kecepatan awal permainan
-    public float speedIncreasePerScore = 0.1f; // Seberapa besar kecepatan bertambah per skor
-    public float currentGameSpeed { get; private set; } // Properti untuk diakses skrip lain
+    public float initialGameSpeed = 5f;
+    public float speedIncreasePerScore = 0.1f;
+    public float currentGameSpeed { get; private set; }
 
-    private int score = 0;
+    // private int score = 0; // DIHAPUS: Skor sekarang dikelola oleh ScoreManager
     private bool isGameOver = false;
-    private int playerHealth = 2; // Pemain punya 2 nyawa
+    private int playerHealth = 2;
     private float screenWidth;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        // Cari ScoreManager jika belum diseret di Inspector
+        if (scoreManager == null)
+        {
+            scoreManager = FindObjectOfType<ScoreManager>();
+        }
+    }
 
     void Start()
     {
-        // Atur kecepatan awal permainan
+        Time.timeScale = 1f;
         currentGameSpeed = initialGameSpeed;
 
-        // Reset volume musik ke awal setiap kali game dimulai/di-restart
-        if (Music.instance != null)
+        // Nonaktifkan panel kalah di awal
+        if (gameOverPanel != null)
         {
-            Music.instance.ResetVolume();
+            gameOverPanel.SetActive(false);
         }
 
-        // Hitung lebar layar dalam satuan world unit
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.ResetVolume();
+        }
+
         screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
-        // Pastikan gunung tidak terlihat di awal permainan
         if (mountainObject != null)
         {
             mountainObject.SetActive(false);
@@ -44,43 +77,40 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver)
         {
-            // Jika game over, cek input untuk restart
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                // Muat ulang scene saat ini
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-            return; // Hentikan update jika game sudah berakhir
+            return;
         }
-
-        // Skor sekarang ditangani oleh AddScore()
     }
 
+    // --- FUNGSI SKOR (Menggunakan ScoreManager) ---
     public void AddScore(int amount)
     {
-        if (isGameOver) return; // Jangan tambah skor jika sudah game over
-        score += amount;
-        if (scoreText != null) scoreText.text = "Score: " + score;
+        if (isGameOver || scoreManager == null) return;
 
-        // Tingkatkan kecepatan permainan berdasarkan skor
-        currentGameSpeed = initialGameSpeed + (score * speedIncreasePerScore);
-        Debug.Log("New Game Speed: " + currentGameSpeed); // Untuk debugging
+        // 1. Tambah skor di ScoreManager
+        scoreManager.AddScore(amount);
+
+        // 2. Tingkatkan kecepatan
+        int currentScoreFromManager = scoreManager.GetCurrentScore();
+        currentGameSpeed = initialGameSpeed + (currentScoreFromManager * speedIncreasePerScore);
+        Debug.Log("New Game Speed: " + currentGameSpeed);
     }
+
 
     public void PlayerTookDamage()
     {
-        Debug.Log("GameManager: PlayerTookDamage() dipanggil!");
-        playerHealth--; // Kurangi nyawa pemain
+        if (isGameOver) return;
 
-        // Naikkan volume musik jika Music Manager ada
-        if (Music.instance != null)
+        Debug.Log("GameManager: PlayerTookDamage() dipanggil!");
+        playerHealth--;
+
+        if (AudioManager.Instance != null)
         {
-            Music.instance.IncreaseVolume();
+            AudioManager.Instance.IncreaseVolumeOnDamage();
+            AudioManager.Instance.PlaySFX("Tabrakan");
         }
 
         if (playerHealth == 1)
         {
-            // Jika ini adalah pukulan pertama, munculkan gunung
             if (mountainObject != null)
             {
                 Debug.Log("GameManager: Nyawa sisa 1, mencoba mengaktifkan gunung.");
@@ -89,45 +119,81 @@ public class GameManager : MonoBehaviour
         }
         else if (playerHealth <= 0)
         {
-            // Jika nyawa habis, mulai urutan "gunung memakan pemain"
             StartCoroutine(MountainEatsPlayerSequence());
         }
     }
 
     private IEnumerator MountainEatsPlayerSequence()
     {
-        isGameOver = true; // Hentikan permainan (spawn batu, skor, dll)
+        isGameOver = true;
 
-        // Nonaktifkan kontrol pemain
         if (player != null)
         {
-            player.GetComponent<PlayerMove>().enabled = false;
+            // Nonaktifkan kontrol pemain
+            Component playerMove = player.GetComponent("PlayerMove"); // Cari komponen PlayerMove
+            if (playerMove != null)
+            {
+                ((MonoBehaviour)playerMove).enabled = false;
+            }
         }
 
-        // Animasi gunung membesar
+        // Animasi gunung membesar (tetap sama)
         if (mountainObject != null)
         {
-            float duration = 1.5f; // Durasi animasi dalam detik
+            float duration = 1.5f;
             float timer = 0;
             Vector3 startScale = mountainObject.transform.localScale;
-            Vector3 endScale = startScale * 3f; // Buat skala 3x lebih besar
+            Vector3 endScale = startScale * 3f;
 
             while (timer < duration)
             {
                 mountainObject.transform.localScale = Vector3.Lerp(startScale, endScale, timer / duration);
                 timer += Time.deltaTime;
-                yield return null; // Tunggu frame berikutnya
+                AudioManager.Instance?.PlaySFX("Bebatuan");
+
+                yield return null;
             }
         }
 
-        // Setelah gunung membesar, panggil GameOver
-        GameOver();
+        HandleGameOver();
     }
 
-    public void GameOver()
+    // --- FUNGSI UTAMA GAME OVER ---
+    public void HandleGameOver()
     {
         isGameOver = true;
-        Destroy(player); // Hancurkan player
-        if (scoreText != null) scoreText.text = "GAME OVER\nScore: " + score + "\nTekan 'R' untuk Restart";
+        Time.timeScale = 0f;
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+
+            if (scoreManager != null)
+            {
+                scoreManager.DisplayFinalScore(scoreManager.GetCurrentScore(), finalScoreDisplayImages);
+            }
+        }
+
+        // Hancurkan pemain
+        if (player != null)
+        {
+            Destroy(player);
+        }
+        AudioManager.Instance?.ResetVolume();
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        AudioManager.Instance?.PlayRandomMusic();
+
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+        AudioManager.Instance?.MusicStop();
     }
 }

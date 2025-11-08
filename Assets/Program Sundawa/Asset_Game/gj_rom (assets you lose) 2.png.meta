@@ -1,0 +1,653 @@
+fileFormatVersion: 2
+guid: 6f6dcc8dea9e7a14a9a09d3e147f6cd5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_0
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 8299
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdc4953b274b5347b59278fff12b35b
+      internalID: -44116878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_1
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 8299
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2890ce84dd40ec74990d2570cb4987d2
+      internalID: 211922214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 7305
+        width: 6671
+        height: 1070
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c6c773d30e8e74d977f7b3dd8e0960
+      internalID: -277641498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_3
+      rect:
+        serializedVersion: 2
+        x: 3118
+        y: 8299
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50512b7fdbdfd5c4793b47847cdb1abb
+      internalID: -598523816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_4
+      rect:
+        serializedVersion: 2
+        x: 5795
+        y: 8299
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3921d95f6c6efa4da1b82e95177f675
+      internalID: -1963645999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_6
+      rect:
+        serializedVersion: 2
+        x: 2157
+        y: 8054
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854c49e9dc706ee48b3f2e292c28c002
+      internalID: -531995849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_7
+      rect:
+        serializedVersion: 2
+        x: 6924
+        y: 7354
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf0100789ed41b44a3add762d42f694
+      internalID: 1347520420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_8
+      rect:
+        serializedVersion: 2
+        x: 4248
+        y: 7288
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2034653700ca45e4e83fa85ad8ec9c41
+      internalID: 1343920289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_9
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 6138
+        width: 4739
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0353c66ecfd57469a4ff27efde6c40
+      internalID: 593070865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4721
+        width: 761
+        height: 633
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b486712e995c464f8fa7115bdd43ed1
+      internalID: -1928551978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_21
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 4721
+        width: 446
+        height: 634
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f037a325e284d49ab36a89f50c37be
+      internalID: 2097934439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_22
+      rect:
+        serializedVersion: 2
+        x: 4440
+        y: 4721
+        width: 790
+        height: 633
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de0afbb950d52a4fbc90747edf6c665
+      internalID: 907618601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_24
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 4713
+        width: 818
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143bbbb28940eb547af3f8d2316d8c0d
+      internalID: 297450989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_25
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 4721
+        width: 800
+        height: 630
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c86373ed1c3ed42aff834c2c323af3
+      internalID: 1479845020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_26
+      rect:
+        serializedVersion: 2
+        x: 3574
+        y: 4721
+        width: 745
+        height: 630
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b0ef593240fbc448470e7c491ce77a
+      internalID: -1278669387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_27
+      rect:
+        serializedVersion: 2
+        x: 5350
+        y: 4713
+        width: 761
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3627627d2380a24cba3311ec82f92b4
+      internalID: -593035778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_29
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 4721
+        width: 785
+        height: 630
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0efa5f4afae09408a772ca586c3c34
+      internalID: -642090541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_30
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 4813
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ca8522627a534419bc8ec4c19eac2f
+      internalID: 659268581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_31
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 4710
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04443a1e6cf10e345941c58a0eb376c1
+      internalID: 1012248575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_32
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 3707
+        width: 804
+        height: 633
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b693f8cb478a242bdf7d55aa31bff1
+      internalID: 1139535490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_33
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 3707
+        width: 764
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d089ee205be39c643b123e278b62d1b8
+      internalID: -65879061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_35
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1705
+        width: 4896
+        height: 1403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb94c64b5101c3340bd643d8cd01613d
+      internalID: 1002903322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gj_rom (assets you lose)_40
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 0
+        width: 4878
+        height: 1402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd5bc7bfdfb5d0459b69fb2520d84db
+      internalID: -2038649308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gj_rom (assets you lose)_0: -44116878
+      gj_rom (assets you lose)_1: 211922214
+      gj_rom (assets you lose)_10: -851454366
+      gj_rom (assets you lose)_11: -709653816
+      gj_rom (assets you lose)_12: -469615948
+      gj_rom (assets you lose)_13: 1722750978
+      gj_rom (assets you lose)_14: 313736467
+      gj_rom (assets you lose)_15: -1058048385
+      gj_rom (assets you lose)_16: 1380404284
+      gj_rom (assets you lose)_17: 1275239967
+      gj_rom (assets you lose)_18: -1384007695
+      gj_rom (assets you lose)_19: 697126119
+      gj_rom (assets you lose)_2: -277641498
+      gj_rom (assets you lose)_20: -1928551978
+      gj_rom (assets you lose)_21: 2097934439
+      gj_rom (assets you lose)_22: 907618601
+      gj_rom (assets you lose)_23: 1251232774
+      gj_rom (assets you lose)_24: 297450989
+      gj_rom (assets you lose)_25: 1479845020
+      gj_rom (assets you lose)_26: -1278669387
+      gj_rom (assets you lose)_27: -593035778
+      gj_rom (assets you lose)_28: -1614790981
+      gj_rom (assets you lose)_29: -642090541
+      gj_rom (assets you lose)_3: -598523816
+      gj_rom (assets you lose)_30: 659268581
+      gj_rom (assets you lose)_31: 1012248575
+      gj_rom (assets you lose)_32: 1139535490
+      gj_rom (assets you lose)_33: -65879061
+      gj_rom (assets you lose)_34: 32279603
+      gj_rom (assets you lose)_35: 1002903322
+      gj_rom (assets you lose)_36: -1761985956
+      gj_rom (assets you lose)_37: -1963138244
+      gj_rom (assets you lose)_38: 1924427686
+      gj_rom (assets you lose)_39: 151058315
+      gj_rom (assets you lose)_4: -1963645999
+      gj_rom (assets you lose)_40: -2038649308
+      gj_rom (assets you lose)_41: -345576595
+      gj_rom (assets you lose)_42: -1264709037
+      gj_rom (assets you lose)_5: -391018261
+      gj_rom (assets you lose)_6: -531995849
+      gj_rom (assets you lose)_7: 1347520420
+      gj_rom (assets you lose)_8: 1343920289
+      gj_rom (assets you lose)_9: 593070865
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

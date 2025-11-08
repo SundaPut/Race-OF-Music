@@ -76,6 +76,14 @@ public class Music : MonoBehaviour
     {
         if (audioSource != null) audioSource.volume = initialVolume;
     }
+
+    public void MusicStop()
+    {
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
 }
 
     
