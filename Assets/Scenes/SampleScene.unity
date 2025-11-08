@@ -352,7 +352,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.068446
+  orthographic size: 5.0222225
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -781,6 +781,7 @@ GameObject:
   - component: {fileID: 848950346}
   - component: {fileID: 848950345}
   - component: {fileID: 848950348}
+  - component: {fileID: 848950349}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -853,6 +854,16 @@ MonoBehaviour:
   player: {fileID: 696363200}
   mountainObject: {fileID: 1334535773}
   scoreText: {fileID: 2031180268}
+  initialGameSpeed: 5
+  speedIncreasePerScore: 0.1
+--- !u!81 &848950349
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848950344}
+  m_Enabled: 1
 --- !u!1 &895713618
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae92e4820b8702a49b78188e37a2015f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2
   obstaclePrefab: {fileID: 8346188811149293112, guid: f88164130f0ced44684a2d52fa34fa01, type: 3}
   spawnInterval: 1
   minMoveDistance: 2
@@ -1287,7 +1297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae92e4820b8702a49b78188e37a2015f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2
   obstaclePrefab: {fileID: 8246000014803346112, guid: 61e6c7f7af20b00438a45c204ab1c1a7, type: 3}
   spawnInterval: 3
   minMoveDistance: 2
@@ -1371,7 +1380,7 @@ Transform:
   m_GameObject: {fileID: 1334535773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23, y: -5.36, z: 0}
+  m_LocalPosition: {x: -0.27, y: -4.59, z: 0}
   m_LocalScale: {x: 10.5012455, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1471,7 +1480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae92e4820b8702a49b78188e37a2015f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2
   obstaclePrefab: {fileID: 8246000014803346112, guid: 61e6c7f7af20b00438a45c204ab1c1a7, type: 3}
   spawnInterval: 3
   minMoveDistance: 2
@@ -1741,7 +1749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae92e4820b8702a49b78188e37a2015f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2
   obstaclePrefab: {fileID: 8346188811149293112, guid: f88164130f0ced44684a2d52fa34fa01, type: 3}
   spawnInterval: 1
   minMoveDistance: 1
