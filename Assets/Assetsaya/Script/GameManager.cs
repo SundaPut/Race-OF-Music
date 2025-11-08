@@ -24,6 +24,12 @@ public class GameManager : MonoBehaviour
         // Atur kecepatan awal permainan
         currentGameSpeed = initialGameSpeed;
 
+        // Reset volume musik ke awal setiap kali game dimulai/di-restart
+        if (Music.instance != null)
+        {
+            Music.instance.ResetVolume();
+        }
+
         // Hitung lebar layar dalam satuan world unit
         screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
@@ -65,6 +71,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GameManager: PlayerTookDamage() dipanggil!");
         playerHealth--; // Kurangi nyawa pemain
+
+        // Naikkan volume musik jika Music Manager ada
+        if (Music.instance != null)
+        {
+            Music.instance.IncreaseVolume();
+        }
 
         if (playerHealth == 1)
         {
